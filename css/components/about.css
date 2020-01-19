@@ -1,0 +1,36 @@
+.about-section {
+  height: 100vh;
+  width: 100vw;
+  z-index: 15;
+  position: relative;
+  padding: 50px 20px 20px 20px;
+  /*background-position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height:100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+  /*padding: 25px 100px;
+  color: white;
+  margin: 0;*/
+}
+
+h3 {
+  margin: 0;
+  font-size: 5vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #eb740f;
+}
+
+p {
+  margin: 0;
+  font-size: 1.7vh;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #eb740f;
+}
