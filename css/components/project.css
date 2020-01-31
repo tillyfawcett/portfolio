@@ -10,6 +10,10 @@
   color: white;
 }
 
+.project-description {
+  padding-bottom: 4%;
+}
+
 .project-examples {
   width: 100%;
   display: flex;
@@ -17,11 +21,18 @@
   flex-wrap: wrap;
   pointer-events: none;
   margin-top: 4%;
+/*  color: white;
+  box-shadow: 0px 0px 10px #A3473E;
+  border-radius: 5px;*/
+}
+
+.slide {
+
 }
 
 .project-examples-item-mobile {
    position: relative;
-/*   border-radius: 5px;*/
+   border-radius: 5px;
    margin: 3%;
    color: white;
    box-shadow: 0px 0px 10px #A3473E;
@@ -29,7 +40,7 @@
 
 .project-examples-item-web {
    position: relative;
-/*   border-radius: 5px;*/
+   border-radius: 5px;
    margin: 3%;
    color: white;
    box-shadow: 0px 0px 10px #A3473E;
@@ -148,7 +159,7 @@
 
 @media (min-width: 1500px) {
   .project {
-/*    opacity: 0;*/
+/*    opacity: 0;
   }
   .project-examples-item-web {
    height: 13vw;

@@ -7,7 +7,7 @@ body {
   display: none;
 }
 
-span {
+/*span {
   border-right: .05em solid;
   animation: caret 1s steps(1) infinite;
 }
@@ -16,7 +16,7 @@ span {
   50% {
     border-color: transparent;
   }
-}
+}*/
 
 .banner {
   background-color: #FF6F61;
