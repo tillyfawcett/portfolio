@@ -35,7 +35,12 @@
     <div class="banner-contents">
       <h1>Tilly</h1>
       <h1>Fawcett</h1>
-      <h1>Front End Developer</h1>
+      <h3>Front End Developer</h3>
+      <!-- <h1>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Front End Developer" ]'>
+          <span class="wrap"></span>
+        </a>
+      </ -->
       <a href="mailto:tillyfawcett@hotmail.com" class="btn btn-primary">CONTACT ME</a>
     </div>
   </div>
@@ -43,14 +48,14 @@
     <h2 class="section-titles"> </h2>
     <div class="row about-me">
       <div class="col-sm-12 col-md-4 about-me-commentary">
-        <h1>About me</h1>
+        <h3>About me</h3>
         <p>Creatively driven, well-organised, problem solver with a high attention to detail.
         From Cornwall, lover of travel, outdoor activities, art and coding.</p>
         <p>Interested in the entire Front End spectrum and furthering my learning where I can.</p>
         <p>Visit my <a href="https://www.linkedin.com/in/tilly-fawcett/">LinkedIn</a> profile or <a href="mailto:tillyfawcett@hotmail.com">contact me</a> for more details.</p>
       </div>
       <div class="col-md-12 col-xl-6 skills">
-        <h1>Skills</h1>
+        <h3>Skills</h3>
         <div class="row">
           <div class="col-sm-3">
               <p>HTML5</p>
@@ -82,7 +87,7 @@
     <h2 class="section-titles"> </h2>
     <div class="row project">
       <div class="col-sm-12 col-md-4 project-description">
-        <h1 class="project-title">Swipe-Chef</h1>
+        <h3 class="project-title">Swipe-Chef</h3>
         <p>Think Tinder, but for indecisive foodies. Swipe-Chef streamlines the search for recipes, simply swipe or use your keyboard to move through recipe cards until you find the perfect match.
           Swipe-Chef was developed and designed by a team of Le Wagon graduates using Ruby on Rails framework, including languages; HTML, CSS and JavaScript.</p>
         <a href="http://www.swipechef.com/" target="_blank">Go to app</a>
@@ -104,7 +109,7 @@
     <h2 class="section-titles"> </h2>
     <div class="row project">
       <div class="col-md-12 col-xl-4 project-description">
-        <h1 class="project-title">Barly</h1>
+        <h3 class="project-title">Barly</h3>
         <p>Queueing sucks. Queueing for a drink on a Friday night after a long week sucks even more. Barly is a web application that allows users
         to order their drinks from the comfort of their table - avoiding the bustle of a queue. Barly is a group final project from Le Wagon's 9 week bootcamp,
         built using Ruby on Rails, HTML, CSS/SASS, JavaScript, jQuery, Bootstrap, SQL and MVC Architecture.</p>
@@ -129,7 +134,7 @@
     <h2 class="section-titles"> </h2>
     <div class="row project">
       <div class="col-md-12 col-xl-4 project-description">
-        <h1 class="project-title">Camel Ski School</h1>
+        <h3 class="project-title">Camel Ski School</h3>
         <p>Where it all began.. I redesigned a clean commercial website for Camel Ski School using SquareSpace, after finding the original WordPress site ugly, impractical and difficult to navigate for the user.
         This is what led me to pursue a career in coding.</p>
         <a href="http://www.camelskischool.com" target="_blank">Go to site</a>
@@ -150,6 +155,40 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(event){
+    var dataText = [ "Front End Developer"];
+
+    function typeWriter(text, i, fnCallback) {
+      if (i < (text.length)) {
+       document.querySelector("h3").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+        setTimeout(function() {
+          typeWriter(text, i + 1, fnCallback)
+        }, 100);
+      }
+
+      else if (typeof fnCallback == 'function') {
+        setTimeout(fnCallback, 700);
+      }
+    }
+
+     function StartTextAnimation(i) {
+       if (typeof dataText[i] == 'undefined'){
+          setTimeout(function() {
+            StartTextAnimation(0);
+          }, 20000);
+       }
+
+      if (i < dataText[i].length) {
+       typeWriter(dataText[i], 0, function(){
+         StartTextAnimation(i + 1);
+       });
+      }
+    }
+
+    StartTextAnimation(0);
+  })
+  </script>
 </body>
 
 

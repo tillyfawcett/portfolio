@@ -7,6 +7,16 @@ body {
   display: none;
 }
 
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
 
 .banner {
   background-color: #FF6F61;
@@ -24,6 +34,10 @@ body {
 
 h1 {
   letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 40px;
 }
 
 p {
