@@ -3,6 +3,10 @@
 /*  color: white;*/
 }
 
+.navbar-brand {
+  height: 54px;
+}
+
 .navbar-nav {
   display: flex!important;
   flex-direction: row;
